@@ -8,6 +8,7 @@
 
 <script src="${pageContext.request.contextPath}/resources/js/simple-test.js"></script>
 
+
 </head>
 
 <body>
@@ -18,13 +19,21 @@
 
 <p>Click here:
 
-<a href="showForm">Hello World Form</a>
+<a href="hello/showForm">Hello World Form</a>
 
 </p>
 
 <br><br>
 
+<a href="student/showForm">Student Form</a>
+
+<br><br>
+
 <input type="button" onclick="doSomeWork()" value="Click Me"/>
+
+<br><br>
+
+<img src="${pageContext.request.contextPath}/resources/images/download.jpg">
 
 </body>
 
