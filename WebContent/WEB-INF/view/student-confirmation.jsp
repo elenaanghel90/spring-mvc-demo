@@ -1,5 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 
 <html>
@@ -10,16 +10,26 @@
 
 <body>
 
-<!-- here are called the getters -->
-The student is confirmed: ${student.theFirstName} ${student.theLastName}
+	<!-- here are called the getters -->
+	The student is confirmed: ${student.theFirstName}
+	${student.theLastName}
 
-<br><br>
+	<br>
+	<br> Country: ${student.country}
 
-Country: ${student.country}
+	<br>
+	<br> Favorite language: ${student.favoriteLanguage}
 
-<br><br>
+	<br>
+	<br> Operating systems:
+	<ul>
+		<!-- here student.opartingSystems is called the getter -->
+		<c:forEach var="temp" items="${student.operatingSystems}">
 
-Favorite language: ${student.favoriteLanguage}
+			<li>${temp}</li>
+
+		</c:forEach>
+	</ul>
 
 </body>
 

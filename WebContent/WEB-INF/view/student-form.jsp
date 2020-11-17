@@ -42,14 +42,29 @@
 
 		<br>
 		<br>
-		
-		Favorite languages:
+
+		<!-- populate radiobuttons from the form -->
+		<!--Favorite languages:-->
 		<!-- on submit, Spring will call student.setFavouriteLanguage() -->
-		Java <form:radiobutton path="favoriteLanguage" value="java"/>
+		<!--Java <form:radiobutton path="favoriteLanguage" value="java"/>
 		C# <form:radiobutton path="favoriteLanguage" value="C#"/>
 		PHP <form:radiobutton path="favoriteLanguage" value="PHP"/>
-		Ruby <form:radiobutton path="favoriteLanguage" value="Ruby"/>
-		
+		Ruby <form:radiobutton path="favoriteLanguage" value="Ruby"/>-->
+
+		<!-- populate radiobuttons from Java class -->
+		Favorite languages:
+		<form:radiobuttons path="favoriteLanguage"
+			items="${student.favoriteLanguageOptions}" />
+
+		<br>
+		<br>
+
+		<!-- add checkboxes -->
+		Operating systems:
+		Linux <form:checkbox path="operatingSystems" value="Linux"/>
+		Mac OS <form:checkbox path="operatingSystems" value="Mac OS"/>
+		MS Windows <form:checkbox path="operatingSystems" value="MS Windows"/>
+
 		<br>
 		<br>
 
