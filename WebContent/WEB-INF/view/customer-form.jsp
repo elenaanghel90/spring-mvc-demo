@@ -3,22 +3,24 @@
 <html>
 
 <head>
-	<title>Customer Registration Form</title>
-	
-	<!-- here we define the color for the error message -->
-	<style>
-		.error{color:red}
-	</style>
-	
+<title>Customer Registration Form</title>
+
+<!-- here we define the color for the error message -->
+<style>
+.error {
+	color: red
+}
+</style>
+
 </head>
 
 <body>
 
 	<i>Fill out the form. Asterix (*) means required.</i>
-	
+
 	<br>
 	<br>
-	
+
 	<form:form action="processForm" modelAttribute="customer">
 
 		First name: <form:input path="firstName" />
@@ -26,14 +28,20 @@
 		<br>
 		<br>
 		
-		Last name(*): <form:input path="lastName"/>
-		<form:errors path="lastName" cssClass="error"/>
+		Last name(*): <form:input path="lastName" />
+		<form:errors path="lastName" cssClass="error" />
 
 		<br>
 		<br>
 
-		<input type="submit" value="Submit"/>
+		Free passes: <form:input path="freePasses" />
+		<form:errors path="freePasses" cssClass="error" />
 		
+		<br>
+		<br>
+
+		<input type="submit" value="Submit" />
+
 	</form:form>
 
 </body>
