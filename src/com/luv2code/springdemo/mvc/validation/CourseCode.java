@@ -12,9 +12,12 @@ import javax.validation.Payload;
 @Target({ElementType.METHOD, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface CourseCode {
-
-	//define the attributes
-	public String value() default "LUV";
+//
+//	//define the attributes
+//	public String value() default "LUV";
+	
+	// define default course code
+    public String[] value() default {"LUV"};
 
 	//define default error message
 	public String message() default "must start with LUV";
